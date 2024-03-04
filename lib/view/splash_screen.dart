@@ -81,7 +81,7 @@ class SplashScreen extends StatelessWidget {
                     color: Colors.black,
                     blurRadius: 5,
                     spreadRadius: 1,
-                    offset: Offset(1, 1),
+                    offset: Offset(0, 1),
                   ),
                 ]),
                 child: CircleAvatar(
