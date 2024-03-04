@@ -1,3 +1,4 @@
+import 'package:dice_roller/view/homepage.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -11,7 +12,7 @@ class SplashScreen extends StatelessWidget {
           gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
-            colors: [Colors.deepPurple, Colors.indigo],
+            colors: [Colors.deepPurple, Color.fromARGB(255, 20, 36, 124)],
           ),
         ),
         child: Padding(
@@ -74,27 +75,21 @@ class SplashScreen extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              Container(
-                decoration:
-                    const BoxDecoration(shape: BoxShape.circle, boxShadow: [
-                  BoxShadow(
-                    color: Colors.black,
-                    blurRadius: 5,
-                    spreadRadius: 1,
-                    offset: Offset(0, 1),
+              CircleAvatar(
+                backgroundColor: Colors.amber,
+                radius: 25,
+                child: IconButton(
+                  iconSize: 25,
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Homepage()),
+                    );
+                  },
+                  icon: const Icon(
+                    Icons.arrow_forward_rounded,
                   ),
-                ]),
-                child: CircleAvatar(
-                  backgroundColor: Colors.amber,
-                  radius: 25,
-                  child: IconButton(
-                    iconSize: 25,
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.arrow_forward_rounded,
-                    ),
-                    color: Colors.black,
-                  ),
+                  color: Colors.black,
                 ),
               )
             ],
